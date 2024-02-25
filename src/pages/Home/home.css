@@ -1,3 +1,79 @@
+.Home {
+    padding-bottom: 5rem;   
+}
+
 #logo {
     height: 10em;
+}
+
+.top {
+    display: flex;
+    padding: 5rem;
+    background-color: aqua;
+    align-items: flex-end;
+}
+
+.top > p {
+    margin-bottom: 0%;
+}
+
+.border {
+    background-color: black;
+    height: 0.5rem;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.hero {
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picscroll {
+    display: flex;
+    align-items: center;
+    padding: 3rem;
+}
+
+.picscroll > svg {
+    height: 3rem;
+    transition: 1s;
+}
+
+.picscroll svg:hover  {
+    height: 5rem;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.hero_img {
+    height: 25rem; 
+    width: 70vw;
+    background-color: lightgray;
+    border: 3px black solid;
+    border-radius: 25px;
+}
+
+.rent {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.rent_section {
+    width: 25vw;
+}
+
+.rent_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.rent_pic {
+    height: 25vw;
+    width: 20vw;
+    border: 1px black solid;
 }

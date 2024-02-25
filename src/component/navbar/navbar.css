@@ -1,0 +1,24 @@
+.navbar {
+    display : flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 3rem;
+    padding-bottom: 2rem;
+}
+
+.pages {
+    display: flex;
+    gap: 3rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.pages > a {
+    text-decoration: none;
+    color: black;
+}
+
+#logo {
+    height: 7rem;
+}
+
