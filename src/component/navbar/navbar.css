@@ -16,6 +16,13 @@
 .pages > a {
     text-decoration: none;
     color: black;
+    transition: 0.5s;
+}
+
+.pages > a:hover {
+    transform: translate(0, -25%);
+    transition: 0.5s;
+    text-decoration: underline;
 }
 
 #logo {

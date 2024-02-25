@@ -58,11 +58,48 @@
 .rent {
     display: flex;
     justify-content: center;
+    gap: 3rem;
     margin-top: 3rem;
 }
 
 .rent_section {
     width: 25vw;
+}
+
+.rent_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rent_left > h1{
+    font-family: 'Italiana';
+    font-weight: 20;
+    font-size: 5rem;
+}
+
+.rent_left > button {
+    font-size: 200%;
+    background-color: gray;
+    color: white;
+    border: 0px;
+    padding: 1rem;
+    border-radius: 25px;
+    transition: 0.5s;
+}
+
+.rent_left > button:hover {
+    background-color: rgb(56, 56, 56);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.rent_mid {
+    font-family: "Italiana";
+    font-size: 2rem;
+    font-weight: 50%;
+    width: 20vw;
 }
 
 .rent_right {
