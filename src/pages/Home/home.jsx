@@ -8,7 +8,7 @@ import heropic from "../../assets/messiBanner.jpg"
 const Home = () => {
     return <div className="Home">
         <NavBar/>
-        <div className="border"></div>
+        <div className="border" style={{'backgroundColor': 'black', 'height': '0.5rem', 'width': '90%', 'margin-left': '5rem'}}></div>
         <div className="hero">
             <div className="picscroll">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="arrowicons">
