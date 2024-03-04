@@ -28,7 +28,7 @@ const Home = () => {
         <div className="rent">
             <div className="rent_left rent_section">
                 <h1>Rent Our Kitchen</h1>
-                <button>Contact Us</button>
+                <button className="button">Contact Us</button>
             </div>
             <div className="rent_mid rent_section">
                 <p>Our kitchen boasts a wide variety of high quality baking equipment, while also keeping a clean and professional look,.</p>
@@ -36,6 +36,34 @@ const Home = () => {
             <div className="rent_right rent_section">
                 <img className="rent_pic"  src={rentpic} alt="" />
             </div>
+        </div>
+        <div className="book">
+            <div className="book_pics">
+                <div className="book_images"></div>
+                <div className="book_images"></div>
+            </div>
+            <div className="book_text">
+                <h1>Book Our Classes!</h1>
+                <p>
+                    blablabalbablablal
+                </p>
+                <button className="button">Book Now</button>
+            </div>
+        </div>
+        <div className="cakes">
+            <h1>Try our cakes</h1>
+            <div className="cake_gallery">
+                <div className="placeholder"></div>
+                <div className="placeholder"></div>
+                <div className="placeholder"></div>
+                <div className="placeholder"></div>
+                <div className="placeholder"></div>
+                <div className="placeholder"></div>
+            </div>
+        </div>
+        <div className="contact">
+            <h1>Contact Us</h1>
+            {/* form */}
         </div>
     </div>;
 };
