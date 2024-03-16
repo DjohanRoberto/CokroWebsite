@@ -4,6 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Home from './pages/Home/home'
 import Gallery from './pages/Gallery/gallery'
+import Cakes from './pages/Cakes/cakes'
 import Classes from './pages/Classes/classes'
 import Contact from './pages/Contact/contact'
 import About from './pages/About/about'
@@ -16,6 +17,7 @@ export default function App() {
       <Route path='/' element={<Home/>}/>
       <Route path='/gallery' element={<Gallery/>}/>
       <Route path='/classes' element={<Classes/>}/>
+      <Route path='/cakes' element={<Cakes/>}/>
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/about' element={<About/>}/>
      </Routes> 

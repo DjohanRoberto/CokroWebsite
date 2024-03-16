@@ -25,7 +25,11 @@
     text-decoration: underline;
 }
 
-#logo {
-    height: 7rem;
+.logo {
+    height: 5rem;
+}
+
+.logo:hover {
+    cursor: pointer;
 }
 

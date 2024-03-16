@@ -18,46 +18,56 @@
     margin-bottom: 0%;
 }
 
+.backpic {
+    height:35rem;
+    width: 50%;
+    object-fit: cover;
+    opacity: 50%;
+    transition: 1s;
+    padding:0;
+    margin:0;
+}
+
+.backpic:hover {
+    width: 57%;
+    transition: 1s;
+    cursor: pointer;
+}
+
 .hero {
     display : flex;
     justify-content: center;
     align-items: center;
 }
 
-.picscroll {
-    display: flex;
-    align-items: center;
-    padding: 3rem;
+.hero>h1 {
+    position: absolute;
+    font-size: 5vh;
 }
 
-.picscroll > svg {
-    height: 3rem;
-    transition: 1s;
+.cakes_text {
+    top: 35rem;
+    pointer-events: none;
+    left: 15%;
+    font-family: 'Snell Roundhand Script'
 }
 
-.picscroll svg:hover  {
-    height: 5rem;
-    cursor: pointer;
-    transition: 1s;
-}
-
-.hero_img {
-    height: 25rem; 
-    width: 70vw;
-    background-color: lightgray;
-    border: 3px black solid;
-    border-radius: 25px;
+.kitchen_text {
+    top: 35rem;
+    right: 15%;
+    pointer-events: none;
 }
 
 .rent {
     display: flex;
-    justify-content: center;
-    gap: 3rem;
+    justify-content: space-around;
+    align-items: center;
     margin-top: 3rem;
+    gap: 1rem;
 }
 
 .rent_section {
-    width: 25vw;
+    width: 25rem;
 }
 
 .rent_left {
@@ -71,9 +81,9 @@
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 5rem;
+    font-size: 4rem;
     margin-top: 0;
-    text-align:center
+    text-align: center
 }
 
 .button {
@@ -94,9 +104,9 @@
 
 .rent_mid {
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 2.5rem;
-    line-height: 3.5rem;
-    width: 20vw;
+    font-size: 2rem;
+    line-height: 3rem;
+    width: 30rem;
 }
 
 .rent_right {
@@ -107,9 +117,10 @@
 }
 
 .rent_pic {
-    height: 25vw;
-    width: 20vw;
+    height: 30rem;
+    width: 25rem;
     border: 1px black solid;
+    object-fit: cover;
 }
 
 .book {
@@ -135,6 +146,14 @@
     width: 25rem;
     border: 1px solid black;
     background-color: gray;
+    object-fit: cover;
+    transition: 1s;
+}
+
+.book_images:hover {
+    height: 17rem;
+    width: 27rem;
+    transition: 1s;
 }
 
 .book_text { 
@@ -160,34 +179,6 @@
     font-size: 250%;
 }
 
-.cakes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.cakes > h1 {
-    font-size: 400%;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: 200;
-}
-
-.cake_gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5rem;
-    justify-content: center;
-    padding: 10rem;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-}
-
-.placeholder {
-    height: 20rem;
-    width: 30rem;
-    background-color: lightgray;
-}
 
 .contact {
     color: white;

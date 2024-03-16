@@ -1,37 +1,36 @@
 import React from "react";
 import './home.css'
 import NavBar from "../../component/navbar/navbar";
+import { useNavigate} from "react-router-dom";
 
-import rentpic from "../../assets/kimchi.jpg"
-import heropic from "../../assets/messiBanner.jpg"
+import cakepic from "../../assets/cakes_1.JPG"
+import kitchenpic from "../../assets/dapur_machine.JPG"
+// import heropic from "../../assets/dapur_wide.JPG"
+import rentpic from "../../assets/dapur_ovens2.JPG"
+import classpic1 from "../../assets/class_1.JPG"
+import classpic2 from "../../assets/class_5.JPG"
 
 const Home = () => {
+    const navigate = useNavigate();
+
     return <div className="Home">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <NavBar/>
-        <div className="border" style={{'backgroundColor': 'black', 'height': '0.5rem', 'width': '90%', 'margin-left': '5rem'}}></div>
+        <div className="border" style={{'backgroundColor': 'black', 'height': '0.5rem'}}></div>
         <div className="hero">
-            <div className="picscroll">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="arrowicons">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-                </svg>
-
-                <img className="hero_img" src={heropic} alt="" />
-
-                {/* <div className="hero_img"></div> */}
-
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="arrowicons">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                </svg>
-            </div>
+            <img src={cakepic} alt="" className="backpic" onClick={() => navigate('/cakes')}/>
+            <img src={kitchenpic} alt="" className="backpic" onClick={() => navigate('/gallery')}/>
+            <h1 className="cakes_text">Cakes</h1>
+            <h1 className="kitchen_text">Kitchen</h1>
+            <div className="border" style={{'backgroundColor': 'black', 'height': '0.5rem'}}></div>
         </div>
-        <div className="border"></div>
         <div className="rent">
             <div className="rent_left rent_section">
                 <h1>Rent Our Kitchen</h1>
                 <button className="button">Contact Us</button>
             </div>
             <div className="rent_mid rent_section">
-                <p>Our kitchen boasts a wide variety of high quality baking equipment, while also keeping a clean and professional look,.</p>
+                <p>Our kitchen boasts a wide variety of high quality baking equipment, while also keeping a clean and professional look.</p>
             </div>
             <div className="rent_right rent_section">
                 <img className="rent_pic"  src={rentpic} alt="" />
@@ -39,8 +38,8 @@ const Home = () => {
         </div>
         <div className="book">
             <div className="book_pics">
-                <div className="book_images"></div>
-                <div className="book_images"></div>
+                <img src={classpic1} alt="" className="book_images" />
+                <img src={classpic2} alt="" className="book_images" />
             </div>
             <div className="book_text">
                 <h1>Book Our Classes!</h1>
@@ -50,17 +49,7 @@ const Home = () => {
                 <button className="button">Book Now</button>
             </div>
         </div>
-        <div className="cakes">
-            <h1>Try our cakes</h1>
-            <div className="cake_gallery">
-                <div className="placeholder"></div>
-                <div className="placeholder"></div>
-                <div className="placeholder"></div>
-                <div className="placeholder"></div>
-                <div className="placeholder"></div>
-                <div className="placeholder"></div>
-            </div>
-        </div>
+        
         <div className="contact">
             <h1>Contact Us</h1>
             {/* form */}
