@@ -178,19 +178,3 @@
 .book_text > p{
     font-size: 250%;
 }
-
-
-.contact {
-    color: white;
-    background-color: black;
-    padding: 5rem;
-    padding-left: 10rem;
-    padding-right: 10rem;
-}
-
-.contact > h1 {
-    font-size: 400%;
-    font-size: 400%;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: 200;
-}

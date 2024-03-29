@@ -1,0 +1,2 @@
+Use Flask for backend
+Go to COMP3900 project for backend ref

@@ -1,11 +1,11 @@
 import React from "react";
 import './home.css'
 import NavBar from "../../component/navbar/navbar";
+import ContactSection from "../../component/contact/contactSection"
 import { useNavigate} from "react-router-dom";
 
 import cakepic from "../../assets/cakes_1.JPG"
 import kitchenpic from "../../assets/dapur_machine.JPG"
-// import heropic from "../../assets/dapur_wide.JPG"
 import rentpic from "../../assets/dapur_ovens2.JPG"
 import classpic1 from "../../assets/class_1.JPG"
 import classpic2 from "../../assets/class_5.JPG"
@@ -49,11 +49,7 @@ const Home = () => {
                 <button className="button">Book Now</button>
             </div>
         </div>
-        
-        <div className="contact">
-            <h1>Contact Us</h1>
-            {/* form */}
-        </div>
+        <ContactSection/>
     </div>;
 };
 

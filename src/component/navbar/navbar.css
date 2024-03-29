@@ -20,7 +20,7 @@
 }
 
 .pages > a:hover {
-    transform: translate(0, -25%);
+    transform: translate(10%, -25%);
     transition: 0.5s;
     text-decoration: underline;
 }

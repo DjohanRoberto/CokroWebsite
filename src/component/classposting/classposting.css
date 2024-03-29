@@ -1,0 +1,33 @@
+.class_posting {
+    background-color: lightgray;
+    border: 1px solid black;
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 25px;
+    box-shadow: -3px 3px rgba(100, 100, 100, 20);
+    transition: 1s;
+}
+
+.class_posting:hover {
+    box-shadow: -8px 8px rgba(100, 100, 100, 20);
+    cursor: pointer;
+    transform: translate(0, -5px);
+    transition: 1s;
+}
+
+.title {
+
+}
+
+.date {
+
+}
+
+.thumbnail {
+
+}
+
+.description {
+    
+}
