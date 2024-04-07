@@ -1,8 +1,8 @@
-import React from "react";
 import './home.css'
 import NavBar from "../../component/navbar/navbar";
 import ContactSection from "../../component/contact/contactSection"
 import { useNavigate} from "react-router-dom";
+import { useRef } from "react";
 
 import cakepic from "../../assets/cakes_1.JPG"
 import kitchenpic from "../../assets/dapur_machine.JPG"
@@ -12,6 +12,7 @@ import classpic2 from "../../assets/class_5.JPG"
 
 const Home = () => {
     const navigate = useNavigate();
+    const contRef = useRef();
 
     return <div className="Home">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
@@ -28,7 +29,9 @@ const Home = () => {
             <div className="rent_left rent_section">
                 <h1>Rent Our Kitchen</h1>
                 <button className="button" onClick={() => {
-                    window.scrollTo({top: 0, left: 0, behavior: "smooth"})
+                    contRef.current?.scrollIntoView({
+                        behavior: 'smooth'
+                    })
                 }}>Contact Us</button>
             </div>
             <div className="rent_mid rent_section">
@@ -54,7 +57,9 @@ const Home = () => {
                 }}>Book Now</button>
             </div>
         </div>
-        <ContactSection/>
+        <div ref={contRef}>
+            <ContactSection/>
+        </div>
     </div>;
 };
 

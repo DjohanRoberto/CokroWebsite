@@ -1,9 +1,10 @@
 .contact {
     color: white;
     background-color: black;
-    padding: 5rem;
+    padding: 1rem;
     padding-left: 10rem;
     padding-right: 10rem;
+    padding-bottom: 7rem;
 }
 
 .contact > h1 {
