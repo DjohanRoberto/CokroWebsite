@@ -3,3 +3,9 @@
     padding-left: 5rem;
     padding-bottom: 5rem;
 }
+
+.classes_title {
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+}

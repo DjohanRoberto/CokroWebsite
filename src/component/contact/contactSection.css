@@ -18,7 +18,7 @@
     flex-flow: row wrap;
     justify-content: center;
     align-content: center;
-    gap: 75px;
+    gap: 50px;
 }
 
 .field_comp {
@@ -30,27 +30,46 @@
 }
 
 .field_comp > label {
-    font-size: 200%;
+    font-size: 1.7rem;
     font-weight: 150%;
 }
 
 .field {
-    padding: 20px;
-    font-size: 150%;
+    padding: 10px;
+    font-size: 1.2rem;
     border-radius: 50px;
     width: 30vw;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .address {
-    width: 67vw;
+    width: 64vw;
 }
 
 .message {
-    padding: 5vh;
-    font-size: 200%;
+    padding: 20px;
+    font-size: 1.2rem;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    width: 65vw;
+    width: 64vw;
     height: 20vh;
+    resize: none;
+    overflow: hidden;
 
+}
+
+.submit {
+    margin-top: 2rem;
+    float: right;
+    border: 0;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 1.5rem;
+    background-color: lightgray;
+    transition: 1s;
+}
+
+.submit:hover {
+    cursor: pointer;
+    background-color: rgb(150, 150, 150);
+    transition: 1s;
 }

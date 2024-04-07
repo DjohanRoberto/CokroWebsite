@@ -1,18 +1,19 @@
 .class_posting {
-    background-color: lightgray;
-    border: 1px solid black;
+    background-color: rgb(137, 137, 137);
     padding: 1rem;
     padding-left: 2rem;
     padding-right: 2rem;
     border-radius: 25px;
-    box-shadow: -3px 3px rgba(100, 100, 100, 20);
+    color: white;
+    
     transition: 1s;
 }
 
 .class_posting:hover {
-    box-shadow: -8px 8px rgba(100, 100, 100, 20);
-    cursor: pointer;
+    background-color: rgb(110, 110, 110);
+    box-shadow: 0 5px rgb(5, 5, 5);
     transform: translate(0, -5px);
+    color: white;
     transition: 1s;
 }
 

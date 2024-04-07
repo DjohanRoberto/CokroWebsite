@@ -31,6 +31,7 @@
 .backpic:hover {
     width: 57%;
     transition: 1s;
+    opacity: 80%;
     cursor: pointer;
 }
 
@@ -56,6 +57,7 @@
     top: 35rem;
     right: 15%;
     pointer-events: none;
+    font-family: 'Snell Roundhand Script'
 }
 
 .rent {

@@ -32,6 +32,7 @@ export default function ContactSection() {
                         <textarea id="message" className='message field' cols="5" rows="50"></textarea>
                     </div>
                 </form>
+                <button className="submit">Submit</button>
                 {/* form */}
             </div>
         </div>

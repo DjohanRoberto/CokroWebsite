@@ -27,7 +27,9 @@ const Home = () => {
         <div className="rent">
             <div className="rent_left rent_section">
                 <h1>Rent Our Kitchen</h1>
-                <button className="button">Contact Us</button>
+                <button className="button" onClick={() => {
+                    window.scrollTo({top: 0, left: 0, behavior: "smooth"})
+                }}>Contact Us</button>
             </div>
             <div className="rent_mid rent_section">
                 <p>Our kitchen boasts a wide variety of high quality baking equipment, while also keeping a clean and professional look.</p>
@@ -46,7 +48,10 @@ const Home = () => {
                 <p>
                     blablabalbablablal
                 </p>
-                <button className="button">Book Now</button>
+                <button className="button" onClick={() => {
+                    navigate("/classes");
+                    window.scroll({top:0, behavior:"smooth"})
+                }}>Book Now</button>
             </div>
         </div>
         <ContactSection/>

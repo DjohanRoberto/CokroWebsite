@@ -10,8 +10,9 @@ const Classes = () => {
             <NavBar></NavBar>
 			<div className="border" style={{'backgroundColor': 'black', 'height': '0.5rem'}}></div>
 			<div className="body">
+				<h1 className="classes_title">Classes</h1>
 				<div className="active_classes">
-					<h1>Active Classes</h1>
+					<h1>Upcoming Classes</h1>
 					<ClassPosting/>
 				</div>
 				<div className="past_classes">
