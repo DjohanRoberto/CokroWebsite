@@ -180,3 +180,51 @@
 .book_text > p{
     font-size: 250%;
 }
+
+.bottom_part {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+}
+
+.title_line {
+    background-color: black;
+    color: black;
+    height: 3px;
+    width: 30vw;
+}
+
+.contact_icons {
+    width: 1.5em;
+    vertical-align: middle;
+}
+
+.contact_person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+}
+
+.contact_person > p {
+    line-height: 2.5em;
+}
+
+.icon_a{
+    text-decoration: none;
+    color: black;
+}
+
+.icon_a:hover{
+    text-decoration: underline;
+    color: black;
+}
+

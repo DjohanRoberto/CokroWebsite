@@ -6,6 +6,7 @@ export default function ContactSection() {
         <div>
             <div className="contact">
                 <h1>Contact Us</h1>
+
                 <form action="" className='form_container'>
                     <div className="field_comp">
                         <label htmlFor="first_name">First Name</label>
