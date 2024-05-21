@@ -66,6 +66,8 @@
     align-items: center;
     margin-top: 3rem;
     gap: 1rem;
+    padding-right: 7vw;
+    padding-left: 7vw;
 }
 
 .rent_section {
@@ -80,12 +82,11 @@
 }
 
 .rent_left > h1{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 4rem;
     margin-top: 0;
-    text-align: center
+    text-align: center  
 }
 
 .button {
@@ -123,6 +124,14 @@
     width: 25rem;
     border: 1px black solid;
     object-fit: cover;
+    transition: 1s ease;
+}
+
+.rent_pic:hover {
+    height: 33rem;
+    width: 27rem;
+    transition: 1s ease;
+    box-shadow: gray 5px 5px 3px 0px;
 }
 
 .book {
@@ -133,6 +142,8 @@
     background-color: lightgray;
     padding-top: 5rem;
     padding-bottom: 5rem;
+    padding-right: 7vw;
+    padding-left: 7vw;
 }
 
 .book_pics {
@@ -149,13 +160,14 @@
     border: 1px solid black;
     background-color: gray;
     object-fit: cover;
-    transition: 1s;
+    transition: 1s ease;
 }
 
 .book_images:hover {
     height: 17rem;
     width: 27rem;
-    transition: 1s;
+    transition: 1s ease;
+    box-shadow: gray 5px 5px 3px 0px;
 }
 
 .book_text { 
@@ -165,13 +177,15 @@
     align-items: center;
 }
 
-.book_text >h1, p{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+.book_text >h1{
     display: flex;
+    font-weight: 400;
+    font-size: 4rem;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 }
+
 
 .book_text > h1{
     font-size: 350%;
@@ -181,50 +195,5 @@
     font-size: 250%;
 }
 
-.bottom_part {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 3rem;
-}
 
-.address {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50vw;
-}
-
-.title_line {
-    background-color: black;
-    color: black;
-    height: 3px;
-    width: 30vw;
-}
-
-.contact_icons {
-    width: 1.5em;
-    vertical-align: middle;
-}
-
-.contact_person {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50vw;
-}
-
-.contact_person > p {
-    line-height: 2.5em;
-}
-
-.icon_a{
-    text-decoration: none;
-    color: black;
-}
-
-.icon_a:hover{
-    text-decoration: underline;
-    color: black;
-}
 

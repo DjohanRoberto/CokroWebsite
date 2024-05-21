@@ -11,12 +11,18 @@ export default function NavBar() {
             <div className="navbar">
                 <img className="logo" src={logo} alt="logo" onClick={() => navigate("/")}/>
                 <div className="pages">
-                    <Link to={'/'}>Home</Link>
-                    <Link to={'/classes'}>Classes</Link>
-                    <Link to={'/gallery'}>Gallery</Link>
-                    <Link to={'/cakes'}>Cakes</Link>
-                    <Link to={'/contact'}>Contact</Link>
-                    <Link to={'/about'}>About</Link>
+                    <Link className='clickable-title' to={'/'}>Home</Link>
+                    <Link className='clickable-title' to={'/classes'}>Classes</Link>
+                    <div className="dropdown">
+                        <Link className='clickable-title' to={'/gallery'}>Gallery</Link>
+                        <div className="dropdown-content">
+                            <a href="/cakes">Cakes</a>
+                            <a href="/cakes">Kitchen</a>
+                            <a href="/cakes">Classes</a>
+                        </div>
+                    </div>
+                    <Link className='clickable-title' to={'/contact'}>Contact</Link>
+                    <Link className='clickable-title' to={'/about'}>About</Link>
                 </div>
             </div>
         </div>

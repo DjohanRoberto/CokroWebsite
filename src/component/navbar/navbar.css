@@ -13,13 +13,13 @@
     justify-content: center;
 }
 
-.pages > a {
+.clickable-title{
     text-decoration: none;
     color: black;
     transition: 0.5s;
 }
 
-.pages > a:hover {
+.clickable-title:hover {
     transform: translate(10%, -25%);
     transition: 0.5s;
     text-decoration: underline;
@@ -33,3 +33,32 @@
     cursor: pointer;
 }
 
+.dropdown-content {
+    display: none;
+    transition: 1s;
+    height: 0;
+    opacity: 0;
+    z-index: 1;
+    background-color: rgb(235, 235, 235);
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    height: auto;
+    gap: 1vh;
+    opacity: 1;
+    transition: all 1s ease;
+}
+
+.dropdown-content > a {
+    padding: 0.5em 1em;
+    font-size: 80%;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown-content > a:hover {
+    background-color: lightgray;
+}

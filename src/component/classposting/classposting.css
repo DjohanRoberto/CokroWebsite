@@ -1,18 +1,18 @@
 .class_posting {
-    background-color: rgb(137, 137, 137);
+    background-color: #EEEEEE;
     padding: 1rem;
     padding-left: 2rem;
     padding-right: 2rem;
     border-radius: 25px;
-    color: white;
-    
+    color: black;
+    width: 60vw;
+    height: 30vh;
     transition: 1s;
 }
 
 .class_posting:hover {
-    background-color: rgb(110, 110, 110);
-    box-shadow: 0 5px rgb(5, 5, 5);
+    background-color: #e4e3e3;
+    box-shadow: 0 5px rgb(0, 0, 0, 0.2);
     transform: translate(0, -5px);
-    color: white;
     transition: 1s;
 }

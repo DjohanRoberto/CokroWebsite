@@ -1,3 +1,53 @@
+.bottom_part {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    /* color: rgb(197, 171, 24); */
+    font-size: large;
+    line-height: 2em;
+    align-items: center;
+    width: 50vw;
+}
+
+.title_line {
+    background-color: black;
+    color: black;
+    height: 3px;
+    width: 30vw;
+}
+
+.contact_icons {
+    width: 1.5em;
+    vertical-align: middle;
+}
+
+.contact_person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+}
+
+.contact_person > p {
+    line-height: 2.5em;
+}
+
+.icon_a{
+    text-decoration: none;
+    color: black;
+}
+
+.icon_a:hover{
+    text-decoration: underline;
+    color: black;
+}
+
 .contact {
     color: white;
     background-color: black;
@@ -8,8 +58,8 @@
 }
 
 .contact > h1 {
-    font-size: 400%;
-    font-size: 400%;
+    font-size: 250%;
+    font-size: 250%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 200;
 }
@@ -19,7 +69,9 @@
     flex-flow: row wrap;
     justify-content: center;
     align-content: center;
-    gap: 50px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    gap: 20px;
 }
 
 .field_comp {
@@ -31,40 +83,40 @@
 }
 
 .field_comp > label {
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     font-weight: 150%;
 }
 
 .field {
     padding: 10px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     border-radius: 50px;
     width: 30vw;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .address {
-    width: 64vw;
+    width: 63vw;
 }
 
 .message {
     padding: 20px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    width: 64vw;
-    height: 20vh;
+    width: 63vw;
+    max-height: 10vh;
     resize: none;
     overflow: hidden;
 
 }
 
 .submit {
-    margin-top: 2rem;
+    margin-top: 3rem;
     float: right;
     border: 0;
-    padding: 10px;
-    border-radius: 15px;
-    font-size: 1.5rem;
+    padding: .5em;
+    border-radius: 20px;
+    font-size: 1.5em;
     color: white;
     background-color: #808080;
     transition: 1s;

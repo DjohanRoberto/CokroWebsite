@@ -10,7 +10,7 @@ const Gallery = () => {
 			<div className="border" style={{'backgroundColor': 'black', 'height': '0.5rem'}}></div>
 			<div className="gallery_body">
 				<h1>Our kitchen</h1>
-
+					
 
 			</div>
 			
