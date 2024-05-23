@@ -14,11 +14,11 @@ export default function NavBar() {
                     <Link className='clickable-title' to={'/'}>Home</Link>
                     <Link className='clickable-title' to={'/classes'}>Classes</Link>
                     <div className="dropdown">
-                        <Link className='clickable-title gallery' to={''}>Gallery</Link>
+                        <Link className='clickable-title gallery' to={'/gallery'}>Gallery</Link>
                         <div className="dropdown-content">
-                            <a href="/cakes">Cakes</a>
-                            <a href="/cakes">Kitchen</a>
-                            <a href="/cakes">Classes</a>
+                            <a href="/gallery">Cakes</a>
+                            <a href="/gallery">Kitchen</a>
+                            <a href="/gallery">Classes</a>
                         </div>
                     </div>
                     <Link className='clickable-title' to={'/contact'}>Contact</Link>
