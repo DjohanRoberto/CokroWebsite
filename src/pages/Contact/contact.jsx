@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <div className="Contact">
       <NavBar></NavBar>
-      <ContactSection/>
+      <ContactSection bottom_part={true}/>
     </div>
   );
 }

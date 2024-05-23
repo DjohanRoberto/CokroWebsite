@@ -56,9 +56,8 @@ const Home = () => {
             </div>
         </div>
         
-        
         <div ref={contRef}>
-            <ContactSection/>
+            <ContactSection bottom_part={true}/>
         </div>
     </div>;
 };

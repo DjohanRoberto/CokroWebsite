@@ -9,6 +9,7 @@ import Contact from './pages/Contact/contact'
 import About from './pages/About/about'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Admin from './pages/Admin/admin';
+import ClassPopup from './component/classpopup/classpopup';
 
 export default function App() {
   return (
@@ -16,7 +17,9 @@ export default function App() {
      <Routes> 
       <Route path='/' element={<Home/>}/>
       <Route path='/gallery' element={<Gallery/>}/>
-      <Route path='/classes' element={<Classes/>}/>
+      <Route path='/classes' element={<Classes/>}>
+        <Route path=':classid' element={<ClassPopup/>}/>
+      </Route>
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/about' element={<About/>}/>
       <Route path='/admin' element={<Admin/>}/>
