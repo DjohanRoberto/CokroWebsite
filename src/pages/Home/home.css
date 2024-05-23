@@ -108,10 +108,9 @@
 }
 
 .rent_mid {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: 3rem;
-    width: 30rem;
+    width: 25vw;
 }
 
 .rent_right {
@@ -123,16 +122,16 @@
 
 .rent_pic {
     position: absolute;
-    height: 30rem;
-    width: 25rem;
+    height: 50vh;
+    width: 20vw;
     border: 1px black solid;
     object-fit: cover;
     transition: 1s ease;
 }
 
 .rent_pic:hover {
-    height: 33rem;
-    width: 27rem;
+    height: 60vh;
+    width: 30vw;
     transition: 1s ease;
     box-shadow: gray 5px 5px 3px 0px;
 }

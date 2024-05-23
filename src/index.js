@@ -10,15 +10,30 @@ import About from './pages/About/about'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Admin from './pages/Admin/admin';
 import ClassPopup from './component/classpopup/classpopup';
+import { useParams } from 'react-router-dom';
 
 export default function App() {
+
+
+  const ClassesInfoWindow = ({classid}) => {
+    return <ClassPopup classtitle={classid}></ClassPopup>
+  }
+
+  const ClassesPage = () => {
+    const params = useParams();
+    return <>
+    <Classes/>
+    {params.classid ? <ClassesInfoWindow classid={params.classid}></ClassesInfoWindow> : <></>} 
+    </>
+  }
+
   return (
     <BrowserRouter>
      <Routes> 
       <Route path='/' element={<Home/>}/>
       <Route path='/gallery' element={<Gallery/>}/>
-      <Route path='/classes' element={<Classes/>}>
-        <Route path=':classid' element={<ClassPopup/>}/>
+      <Route path='/classes' element={<ClassesPage/>}>
+        <Route path=':classid' element={<ClassesInfoWindow/>}/>
       </Route>
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/about' element={<About/>}/>

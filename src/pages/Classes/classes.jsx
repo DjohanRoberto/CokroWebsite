@@ -17,7 +17,7 @@ const Classes = () => {
 	// const [popup , setPopup] = React.useState(false);
 
 	// const [triggerRerender, setTrigger] = React.useState(false);
-	// const navigate = useNavigate();
+	const navigate = useNavigate();
 	// React.useEffect(() => {
 	//   }, [triggerRerender]);
 
@@ -27,7 +27,7 @@ const Classes = () => {
 			<div className="body">
 				<h1 style={{fontSize: '3rem'}}>Upcoming Classes</h1>
 				<div className="active_classes">
-					<button onClick={navigate('/classes/01')}>Test button</button>
+					<button onClick={() => navigate('/classes/01')}>Test button</button>
 					<ClassPosting classtitle="Class 1"/>
 					<ClassPosting classtitle="Class 2"/>
 				</div>
