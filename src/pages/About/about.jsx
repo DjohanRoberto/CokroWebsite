@@ -5,7 +5,6 @@ const About = () => {
   return (
     <div className="About">
       <NavBar></NavBar>
-			<div className="border" style={{'backgroundColor': 'black', 'height': '0.5rem'}}></div>
       About
     </div>
   );

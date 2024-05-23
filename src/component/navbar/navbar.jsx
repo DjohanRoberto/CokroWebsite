@@ -14,7 +14,7 @@ export default function NavBar() {
                     <Link className='clickable-title' to={'/'}>Home</Link>
                     <Link className='clickable-title' to={'/classes'}>Classes</Link>
                     <div className="dropdown">
-                        <Link className='clickable-title' to={'/gallery'}>Gallery</Link>
+                        <Link className='clickable-title gallery' to={''}>Gallery</Link>
                         <div className="dropdown-content">
                             <a href="/cakes">Cakes</a>
                             <a href="/cakes">Kitchen</a>
@@ -25,6 +25,7 @@ export default function NavBar() {
                     <Link className='clickable-title' to={'/about'}>About</Link>
                 </div>
             </div>
+            <div className="border" style={{'backgroundColor': 'black', 'height': '0.5rem', 'width' : '100vw', 'boxShadow' : '0 5px 5px 0 rgba(0, 0, 0, 0.3)'}}></div>
         </div>
     )
 }

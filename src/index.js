@@ -9,6 +9,7 @@ import Classes from './pages/Classes/classes'
 import Contact from './pages/Contact/contact'
 import About from './pages/About/about'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Admin from './pages/Admin/admin';
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
       <Route path='/cakes' element={<Cakes/>}/>
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/about' element={<About/>}/>
+      <Route path='/admin' element={<Admin/>}/>
      </Routes> 
     </BrowserRouter> 
   );

@@ -1,6 +1,7 @@
 .Home {
     padding-bottom: 5rem;   
     padding-bottom: 0;
+    overflow-x: hidden;
 }
 
 #logo {
@@ -10,7 +11,6 @@
 .top {
     display: flex;
     padding: 5rem;
-    background-color: aqua;
     align-items: flex-end;
 }
 
@@ -63,8 +63,10 @@
 .rent {
     display: flex;
     justify-content: space-around;
+    background-color: rgb(255, 255, 250);
     align-items: center;
-    margin-top: 3rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
     gap: 1rem;
     padding-right: 7vw;
     padding-left: 7vw;
@@ -120,6 +122,7 @@
 }
 
 .rent_pic {
+    position: absolute;
     height: 30rem;
     width: 25rem;
     border: 1px black solid;
@@ -135,11 +138,11 @@
 }
 
 .book {
-    margin-top: 10vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: lightgray;
+    background-color: rgb(44, 44, 44);
+    color: white;
     padding-top: 5rem;
     padding-bottom: 5rem;
     padding-right: 7vw;
@@ -157,7 +160,7 @@
 .book_images {
     height: 15rem;
     width: 25rem;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 255, 250);
     background-color: gray;
     object-fit: cover;
     transition: 1s ease;
@@ -167,7 +170,7 @@
     height: 17rem;
     width: 27rem;
     transition: 1s ease;
-    box-shadow: gray 5px 5px 3px 0px;
+    box-shadow: rgba(0, 0, 0, 0.8) 5px 5px 3px 0px;
 }
 
 .book_text { 

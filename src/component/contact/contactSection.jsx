@@ -31,7 +31,7 @@ export default function ContactSection() {
                 </div>
             </div>
             <div className="contact">
-                <h1>Contact Us</h1>
+                <h1>Get In Touch!</h1>
 
                 <form action="" className='form_container'>
                     <div className="field_comp">

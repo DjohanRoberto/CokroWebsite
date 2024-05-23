@@ -17,13 +17,11 @@ const Home = () => {
     return <div className="Home">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <NavBar/>
-        <div className="border" style={{'backgroundColor': 'black', 'height': '0.5rem'}}></div>
         <div className="hero">
             <img src={cakepic} alt="" className="backpic" onClick={() => navigate('/cakes')}/>
             <img src={kitchenpic} alt="" className="backpic" onClick={() => navigate('/gallery')}/>
             <h1 className="cakes_text">Cakes</h1>
             <h1 className="kitchen_text">Kitchen</h1>
-            <div className="border" style={{'backgroundColor': 'black', 'height': '0.5rem'}}></div>
         </div>
         <div className="rent">
             <div className="rent_left rent_section">

@@ -6,7 +6,6 @@ const Contact = () => {
   return (
     <div className="Contact">
       <NavBar></NavBar>
-			<div className="border" style={{'backgroundColor': 'black', 'height': '0.5rem'}}></div>
       <ContactSection/>
     </div>
   );

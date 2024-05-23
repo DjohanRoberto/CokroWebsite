@@ -5,9 +5,11 @@ const ClassPosting = ({ classtitle }) => {
     return (
         <div className="class_posting">
             <h1 className="title">{classtitle}</h1>
-            <h3 className="date">01 Month YEAR</h3>
-            <img src="" alt="" className="thumbnail" />
-            <p className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod veniam amet tempora et dignissimos ipsum fugit assumenda dicta voluptatibus qui? Id accusamus alias adipisci tempora nam nihil maxime porro nobis.</p>
+            <div className="border"></div>
+            <div className="right">
+                <h2 className="instructor">Instructor</h2>
+                <h3 className="date">01 January 2024, 11am - 4pm</h3>
+            </div>
         </div>
     )
 }
