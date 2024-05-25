@@ -6,7 +6,12 @@
 
 #delete account
 
-#post new class
 
-#delete class posting
+#placeholder TODO change later
+mastername = "jusi"
+masterpass = "pass123"
+
+
+
+
 
