@@ -16,7 +16,7 @@ const Gallery = () => {
 				<div className="categories sections" id="categories">
 					<div className="classes_category category">
 						<div className="svg_container">
-							<CakeIcon className="icon"/>
+							<BakeIcon className="icon"/>
 						</div>
 						<h1>Classes</h1>
 						<p>Short description about the categories</p>
@@ -30,7 +30,7 @@ const Gallery = () => {
 					</div>
 					<div className="cakes_category category">
 						<div className="svg_container">
-							<BakeIcon className="icon"/>
+							<CakeIcon className="icon"/>
 						</div>
 						<h1>Cakes</h1>
 						<p>Short description about the categories</p>
@@ -39,7 +39,7 @@ const Gallery = () => {
 				<div className="classes sections" id="classes">
 					<h1>Classes</h1>
 				</div>
-				<div className="kitchen sections" id="kitchen ">
+				<div className="kitchen sections" id="kitchen">
 					<h1>Kitchen</h1>
 				</div>
 				<div className="cakes sections" id="cakes">

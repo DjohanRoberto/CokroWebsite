@@ -49,15 +49,15 @@
 .cakes_text {
     top: 35rem;
     pointer-events: none;
+    font-weight: 400;
     left: 15%;
-    font-family: 'Snell Roundhand Script'
 }
 
 .kitchen_text {
     top: 35rem;
     right: 15%;
+    font-weight: 400;
     pointer-events: none;
-    font-family: 'Snell Roundhand Script'
 }
 
 .rent {

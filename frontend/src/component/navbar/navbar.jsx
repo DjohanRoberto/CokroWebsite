@@ -16,9 +16,9 @@ export default function NavBar() {
                     <div className="dropdown">
                         <Link className='clickable-title gallery' to={'/gallery'}>Gallery</Link>
                         <div className="dropdown-content">
-                            <a href="/gallery">Classes</a>
-                            <a href="/gallery">Kitchen</a>
-                            <a href="/gallery">Cakes</a>
+                            <a href="/gallery#classes">Classes</a>
+                            <a href="/gallery#kitchen">Kitchen</a>
+                            <a href="/gallery#cakes">Cakes</a>
                         </div>
                     </div>
                     <Link className='clickable-title' to={'/contact'}>Contact</Link>
