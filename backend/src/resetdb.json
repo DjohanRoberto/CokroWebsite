@@ -1,0 +1,13 @@
+{
+    "classid": 0,
+    "accounts": [
+        {
+            "name": "yusi",
+            "pass": "1234",
+            "master": true
+        }
+    ],
+    "classes": {
+        
+    }
+}
