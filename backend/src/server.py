@@ -35,13 +35,14 @@ def newClassPost():
             "time": time,
             "desc": str,
             "img1": img_url,
-            "img1": img_url,
-            "instrutor_img": img_url,
+            "img2": img_url,
+            "instructor_img": img_url,
         }
         returns:
             - listing_id
     """
     data = request.get_json()
+    print(data)
     classtitle = data['classtitle']
     instructor = data['instructor']
     date = data['date']
@@ -49,7 +50,7 @@ def newClassPost():
     desc = data['desc']
     img1 = data['img1']
     img2 = data['img2']
-    instructor_img = data['instructor_img']
+    instructor_img = data['instimg']
     classid = newClass(classtitle, instructor, date, time, desc, img1, img2, instructor_img)
     return classid
 
