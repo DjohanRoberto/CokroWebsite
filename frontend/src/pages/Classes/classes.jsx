@@ -13,11 +13,17 @@ import PastClass from "../../component/pastclass/pastclass";
 
 const Classes = () => {
 
-	// const [popup , setPopup] = React.useState(false);
+	const [classes, setClasses] = React.useState({})
 
-	// const [triggerRerender, setTrigger] = React.useState(false);
-	// React.useEffect(() => {
-	//   }, [triggerRerender]);
+	React.useEffect(() => {
+		fetch("/getclasses").then(
+            res => res.json()
+        ).then(
+            data => {
+                setClasses(data)
+            }
+        )
+	  }, []);
 
     return ( 
         <div className="Classes">
@@ -25,8 +31,20 @@ const Classes = () => {
 			<div className="body">
 				<h1 style={{fontSize: '3rem'}}>Upcoming Classes</h1>
 				<div className="active_classes">
-					<ClassPosting classid="01"/>
-					<ClassPosting classid="02"/>
+					{Object.keys(classes).length > 0 
+					? <> 
+						{Object.keys(classes).map(c => (
+                        <>
+                            {<>
+                                <ClassPosting classid={c} key={c}></ClassPosting>
+                            </>}
+                        </>
+                        ))}
+					</>
+					: <>
+						<h2>No Classes Coming Up</h2>
+					</>
+					}
 				</div>
 				<h1 style={{fontSize: '3rem', textAlign: 'right'}}>Past Classes</h1>
 				<div className="past_classes">

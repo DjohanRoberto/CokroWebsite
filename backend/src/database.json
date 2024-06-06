@@ -1,4 +1,22 @@
 {
-    "accounts": [],
-    "classes": []
+    "classid": 15,
+    "accounts": [
+        {
+            "name": "yusi",
+            "pass": "1234",
+            "master": true
+        }
+    ],
+    "classes": {
+        "15": {
+            "classtitle": "Temp Class15",
+            "instructor": "Mr Teacher",
+            "date": "01 January 2024",
+            "time": "10PM",
+            "desc": "Erm this is a class description erm",
+            "img1": "img1",
+            "img2": "img2",
+            "instructorImg": "instructor_img"
+        }
+    }
 }

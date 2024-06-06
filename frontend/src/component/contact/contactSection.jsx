@@ -2,6 +2,7 @@ import React from 'react'
 import './contactSection.css'
 
 const ContactSection = ({bottom_part}) => {
+
     return (
         <div>
             {bottom_part
@@ -66,7 +67,6 @@ const ContactSection = ({bottom_part}) => {
                     </div>
                 </form>
                 <button className="submit">Submit</button>
-                {/* form */}
             </div>
         </div>
     )

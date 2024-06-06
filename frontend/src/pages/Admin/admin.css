@@ -1,5 +1,78 @@
-.admin {
-    height: 500px;
-    width: 500px;
-    background-image: linear-gradient(#613723, #1e1412);
+.popupBG {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.2);
 }
+
+.newClassPopup {
+    width: 50vw;
+    height: 70vh;
+    left: 25vw;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: gray;
+}
+
+.admin_title {
+    font-size: 250%;
+    margin-top: 5vh;
+    margin-left: 5vw;
+}
+
+.create_button {
+    margin-top: 5vh;
+    margin-left: 5vw;
+}
+
+.classes_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5vw;
+    margin-top: 5vh;
+    gap: 5vh;
+    width: 84vw;
+    padding: 3vw;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-bottom: 5vh;
+}
+
+.class_posting {
+    background-color: #eeeeee;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80vw;
+    border: 1px solid rgba(3, 0, 0, 0.5)
+}
+
+.border {
+    background-color: black;
+    width: 5px;
+    height: 80px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+}
+
+.instructor,.date {
+    margin : 0.7rem;
+}
+
+.class_posting:hover {
+    transform: translate(0, -5%);
+    background-color: #dedede;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.3);
+}
+

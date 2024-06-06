@@ -4,10 +4,6 @@
 #                                                     #
 #######################################################
 
-import json
-
-file = "database.json"
-
 # Class Object:
 # - classid (int)
 # - classname (str)
@@ -19,35 +15,18 @@ file = "database.json"
 # - img2 (img)
 # - instructorImg (img)
 
-# creates new posting for a class (with full information)
-def newClass(classtitle, instructor, date, time, desc, img1, img2, instructorImg):
+import json
 
-    classid = 1 #TODO make id 
-    data = {
-        'classid': classid, 
-        'classtitle': classtitle,
-        'instructor': instructor,
-        'date': date,
-        'time': time,
-        'desc': desc,
-        'img1': img1,
-        'img2': img2,
-        'instructorImg': instructorImg
-    }
+db_file = "database.json"
 
-    
-
+# returns info about a class for display
+def getClassInfo(classid):
     return
 
-# returns info about class for display
-def getClassInfo():
-    return
-    
-# deletes an active class post
-def deleteClass(classid): 
-    return
+# returns class ids and basic info for all active classes
+def getAllClasses():
+    f = open(db_file)
+    data = json.load(f)
+    return data['classes']
 
-# changes the info of an active class post
-def editClass(classid):
-    return
 
