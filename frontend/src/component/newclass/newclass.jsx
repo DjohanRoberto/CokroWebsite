@@ -1,1 +1,0 @@
-// pop up for when new class button is pressed in admin

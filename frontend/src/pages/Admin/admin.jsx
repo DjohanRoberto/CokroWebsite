@@ -1,10 +1,13 @@
 import React from "react";
 import './admin.css'
 
+import { useNavigate } from "react-router-dom";
 import { fileToDataUrl } from "../../helpers/fileToDataUrl";
 
 
 const Admin = () => {
+
+    const navigate = useNavigate()
 
     const [newPopup, setNewPopup] = React.useState(false)
     const [classes, setClasses] = React.useState({})
@@ -16,6 +19,8 @@ const Admin = () => {
     const [classDate, setClassDate] = React.useState('')
     const [classTime, setClassTime] = React.useState('')
     const [classDesc, setClassDesc] = React.useState('')
+    const [classSlots, setClassSlots] = React.useState(0)
+    const [classPrice, setClassPrice] = React.useState(0)
     const [classImg1, setClassImg1] = React.useState(null)
     const [classImg2, setClassImg2] = React.useState(null)
     const [classInstImg, setClassInstImg] = React.useState(null)
@@ -30,9 +35,14 @@ const Admin = () => {
         )
     }, [trigger])
 
-    // def createNewClass(classtitle, instructor, date, time, desc, img1, img2, instructorImg):
-    async function createNewClass(title, inst, date, time, desc, img1, img2, inst_img) {
-        // TODO
+    // creates a new class wutg details
+    async function createNewClass(title, inst, date, time, desc, slots, price, img1, img2, inst_img) {
+
+        // checks
+        if (title === '' || inst === '' || date === '' || time === '' || desc === '' || slots === 0 || price === 0 || img1 === '' || img2 === '' || inst_img === '') {
+            return false
+        }
+
         const options = {
             method: "POST",
             headers: {
@@ -44,6 +54,8 @@ const Admin = () => {
                 date: date,
                 time: time,
                 desc: desc,
+                slots: slots,
+                price: price,
                 img1: img1,
                 img2: img2,
                 instimg: inst_img
@@ -55,11 +67,14 @@ const Admin = () => {
 
         if (data.error) {
             console.log("New Class Error")
+            return false
         } else {
             console.log("New Class Success")
+            return true
         }
     }
 
+    // deletes a class from the active classes by its id
     async function deleteClass(id) {
         const options = {
             method: "DELETE",
@@ -80,6 +95,41 @@ const Admin = () => {
             console.log('Delete Success')
         }
     }
+
+    // resets the new class form
+    async function resetForm() {
+        setClassTitle('')
+        setClassInstructor('')
+        setClassDate('')
+        setClassTime('')
+        setClassDesc('')
+        setClassSlots(0)
+        setClassPrice(0)
+        setClassImg1(null)
+        setClassImg2(null)
+        setClassInstImg(null)
+
+        const img1 = document.getElementById('class_img_1')
+        const img2 = document.getElementById('class_img_2')
+        const inst = document.getElementById('inst_img')
+    
+        img1.value = null
+        img2.value = null
+        inst.value = null
+    }
+
+    // // gets details about a class by its id
+    // async function getClassInfo(id) {
+    //     const options = {
+    //         method : 'GET',
+    //         headers : {
+    //             'Content-Type': 'application/json'
+    //         },
+    //         body : JSON.stringify({
+    //             classid: id
+    //         })
+    //     }
+    // }
 
     return (
         <div className="">
@@ -103,7 +153,13 @@ const Admin = () => {
                         
                         <label htmlFor="class_desc">Description</label>
                         <input type="text" className="class_desc" id='class_desc' value={classDesc} onInput={e => setClassDesc(e.target.value)}/>
-                        
+
+                        <label htmlFor="class_slots">Slots</label>
+                        <input type="number" className="class_slots" id='class_slots' value={classSlots} onInput={e => setClassSlots(e.target.value)}/>
+
+                        <label htmlFor="class_price">Price</label>
+                        <input type="number" className="class_price" id='class_price' value={classPrice} onInput={e => setClassPrice(e.target.value)}/>
+
                         <label htmlFor="class_img_1">Image 1</label>
                         <input type="file" accept="image/*" className="class_img_1" id='class_img_1' onChange={async file => {
                             setClassImg1(await fileToDataUrl(file.target.files[0]))
@@ -119,11 +175,20 @@ const Admin = () => {
                             setClassInstImg(await fileToDataUrl(file.target.files[0]))
                         }}/>
                         
-                        <button className="create_popup_button" onClick={() => {
-                            createNewClass(classTitle, classInstructor, classDate, classTime, classDesc, classImg1, classImg2, classInstImg)
-                            setTrigger(!trigger)
-                            setNewPopup(false)
+                        <button className="create_popup_button" onClick={async () => {
+                            const ret = await createNewClass(classTitle, classInstructor, classDate, classTime, classDesc, classSlots, classPrice, classImg1, classImg2, classInstImg)
+                            if (ret === true) {
+                                setTrigger(!trigger)
+                                setNewPopup(false)
+                                // snack bar : success (refresh if needed)
+                            } else {
+                                console.log('missing inputs')
+                                // snack bar : failed
+                            }
                         }}>Create </button>
+                        <button className="popup_reset" onClick={() => {
+                            resetForm()
+                        }}>Reset</button>
                         <button className="popup_close" onClick={() => {
                             setNewPopup(false)
                         }}>Close</button>
@@ -134,10 +199,9 @@ const Admin = () => {
             </>}
         
             <div className="container">
-                <h1 className="admin_title">Admin Page</h1>
+                <h1 className="admin_title">Welcome</h1>
                 <button className="create_button" onClick={() => {
                     setNewPopup(true)
-                    // createNewClass()
                     setTrigger(!trigger)
                 }}>Create New Class</button>
                 <div className="classes_section">
@@ -153,15 +217,18 @@ const Admin = () => {
                         {Object.keys(classes).map(c => (
                         <>
                             {<>
-                                <div className="class_posting" key={c}>
-                                    <h1 className="title">{c}</h1>
+                                <div className="class_posting" onClick={() => {
+                                    navigate('/admin/' + c)
+                                }} key={c}>
+                                    <h1 className="title">{classes[c].classtitle}</h1>
                                     <div className="border"></div>
                                     <div className="right">
-                                        <h2 className="instructor">Instructor</h2>
-                                        <h3 className="date">01 January 2024, 11am - 4pm</h3>
-                                        <button className="delete" onClick={() => {
+                                        <h2 className="instructor">{classes[c].instructor}</h2>
+                                        <h3 className="date">{classes[c].date}, {classes[c].time}</h3>
+                                        <button className="delete" onClick={(e) => {
                                             deleteClass(c)
                                             setTrigger(!trigger)
+                                            e.stopPropagation()
                                         }
                                             }>Delete Class</button>
                                     </div>

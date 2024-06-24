@@ -63,7 +63,7 @@
 .rent {
     display: flex;
     justify-content: space-around;
-    background-color: rgb(255, 255, 250);
+    background-color: rgb(247, 245, 245);
     align-items: center;
     padding-top: 10rem;
     padding-bottom: 10rem;
@@ -130,8 +130,8 @@
 }
 
 .rent_pic:hover {
-    height: 60vh;
-    width: 30vw;
+    height: 56vh;
+    width: 23vw;
     transition: 1s ease;
     box-shadow: gray 5px 5px 3px 0px;
 }
@@ -140,7 +140,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: rgb(44, 44, 44);
+    background-color: rgba(44, 44, 44, 0.7);
     color: white;
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -169,7 +169,7 @@
     height: 17rem;
     width: 27rem;
     transition: 1s ease;
-    box-shadow: rgba(0, 0, 0, 0.8) 5px 5px 3px 0px;
+    box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 3px 0px;
 }
 
 .book_text { 

@@ -4,7 +4,7 @@ import { Link, useNavigate} from "react-router-dom";
 import './navbar.css'
 
 
-export default function NavBar() {
+const NavBar = () => {
     const navigate = useNavigate();
     return (
         <div>
@@ -29,3 +29,5 @@ export default function NavBar() {
         </div>
     )
 }
+
+export default NavBar;

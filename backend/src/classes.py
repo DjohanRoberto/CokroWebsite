@@ -21,7 +21,9 @@ db_file = "database.json"
 
 # returns info about a class for display
 def getClassInfo(classid):
-    return
+    f = open(db_file)
+    data = json.load(f)
+    return data['classes'][classid]
 
 # returns class ids and basic info for all active classes
 def getAllClasses():

@@ -15,8 +15,17 @@ const Classes = () => {
 
 	const [classes, setClasses] = React.useState({})
 
+	console.log(classes)
+
 	React.useEffect(() => {
-		fetch("/getclasses").then(
+		const options = {
+			method : "GET",
+			headers : {
+				'Content-Type': 'application/json'
+			}
+		}
+
+		fetch("/getclasses", options).then(
             res => res.json()
         ).then(
             data => {
@@ -36,7 +45,7 @@ const Classes = () => {
 						{Object.keys(classes).map(c => (
                         <>
                             {<>
-                                <ClassPosting classid={c} key={c}></ClassPosting>
+                                <ClassPosting classid={c} classObj={classes[c]} key={c}></ClassPosting>
                             </>}
                         </>
                         ))}

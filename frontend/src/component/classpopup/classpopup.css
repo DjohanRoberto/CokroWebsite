@@ -46,7 +46,7 @@
     border-radius: 50%;
 }
 
-.left {
+.left_popup {
     width: 60%;
     height: 100%;
 }
@@ -57,7 +57,7 @@
     flex-direction: column;
 }
 
-.right {
+.right_popup {
     width: 40%;
     height: 100%;
     display: flex;
@@ -79,7 +79,8 @@
 }
 
 .pics {
-    background-size: cover;
+    background-size: cover  ;
+    background-repeat: no-repeat;
 }
 
 .top_text {
@@ -88,7 +89,7 @@
 }
 
 .top_text h1 {
-    font-size: 3em;
+    font-size: 2em;
 }
 
 .top_text h2 {
