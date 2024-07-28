@@ -58,10 +58,6 @@ const ContactSection = ({bottom_part}) => {
                         <input type="text" className="mobile_number field short" id='mobile_number' />
                     </div>
                     <div className="field_comp">
-                        <label htmlFor="address">Address</label>
-                        <input type="text" className="address field short" id='address' />
-                    </div>
-                    <div className="field_comp">
                         <label htmlFor="message">Message</label>
                         <textarea id="message" className='message field' cols="5" rows="50"></textarea>
                     </div>

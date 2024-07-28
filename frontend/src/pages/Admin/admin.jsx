@@ -5,9 +5,11 @@ import { useNavigate } from "react-router-dom";
 import { fileToDataUrl } from "../../helpers/fileToDataUrl";
 
 
-const Admin = () => {
+const Admin = ({ adminToken }) => {
 
     const navigate = useNavigate()
+
+    const [token, setToken] = React.useState('')
 
     const [newPopup, setNewPopup] = React.useState(false)
     const [classes, setClasses] = React.useState({})
@@ -26,6 +28,10 @@ const Admin = () => {
     const [classInstImg, setClassInstImg] = React.useState(null)
 
     React.useEffect(() => {
+        // setToken(token)
+        // if (token === '') {
+        //     navigate('/adminlogin')
+        // }
         fetch("/getclasses").then(
             res => res.json()
         ).then(
@@ -33,7 +39,7 @@ const Admin = () => {
                 setClasses(data)
             }
         )
-    }, [trigger])
+    }, [trigger, token, navigate])
 
     // creates a new class wutg details
     async function createNewClass(title, inst, date, time, desc, slots, price, img1, img2, inst_img) {
@@ -130,7 +136,6 @@ const Admin = () => {
     //         })
     //     }
     // }
-
     return (
         <div className="">
             {newPopup 

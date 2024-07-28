@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 7rem;
 }
 
 .categories {
@@ -36,4 +37,11 @@
     padding: 10px;
     height: 15vh;
     width: auto ;
+}
+
+.sections {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

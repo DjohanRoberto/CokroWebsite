@@ -11,9 +11,14 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Admin from './pages/Admin/admin';
 import ClassPopup from './component/classpopup/classpopup';
 import EditClass from './component/editclass/editclass';
-import { useParams } from 'react-router-dom';
+import AdminLogin from './pages/Admin/AdminLogin/adminlogin';
+import { Navigate, useParams } from 'react-router-dom';
 
 export default function App() {
+
+  const ToHome = () => {
+    return <Navigate replace to='/home'/>
+  }
 
   const ClassesInfoWindow = ({classid}) => {
     return <ClassPopup classid={classid}></ClassPopup>
@@ -31,18 +36,29 @@ export default function App() {
     return <EditClass classid={classid}></EditClass>
   }
 
-  const AdminPage = () => {
+  const AdminPage = ({ token }) => {
     const params = useParams();
+
     return <>
-      <Admin/>
+      <Admin adminToken={token}/>
       {params.classid ? <ClassEditWindow classid={params.classid}/> : <></>}
+    </>
+  }
+
+  const AdminLoginToken = () => {
+    const params = useParams()
+    console.log('test')
+    console.log(params.token)
+    return <> 
+      <AdminPage token={params.token}/>
     </>
   }
 
   return (
     <BrowserRouter>
      <Routes> 
-      <Route path='/' element={<Home/>}/>
+     <Route path='/' element={<ToHome/>}/>
+      <Route path='/home' element={<Home/>}/>
       <Route path='/gallery' element={<Gallery/>}/>
       <Route path='/classes' element={<ClassesPage/>}>
         <Route path=':classid' element={<ClassesInfoWindow/>}/>
@@ -51,6 +67,9 @@ export default function App() {
       <Route path='/about' element={<About/>}/>
       <Route path='/admin' element={<AdminPage/>}>
         <Route path=':classid' element={<ClassEditWindow/>}></Route>
+      </Route>
+      <Route path='/adminlogin' element={<AdminLogin/>}>
+        <Route path=':token' element={<AdminLoginToken/>}></Route>
       </Route>
      </Routes> 
     </BrowserRouter> 

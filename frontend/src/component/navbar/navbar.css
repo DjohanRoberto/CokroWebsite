@@ -1,8 +1,21 @@
 .navbar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 90;
+}
+
+.navbar-content {
     display : flex;
-    align-items: flex-end;
+    width: 100vw;
+    align-items: center;
     justify-content: space-around;
     padding: 2rem;
+    background-color: white;
+}
+
+.space {
+    height: 7rem;
 }
 
 .pages {
@@ -52,13 +65,15 @@
     transition: all 1s ease;
 }
 
-.dropdown-content > a {
+.navbar-dropdown-buttons {
     padding: 0.5em 1em;
     font-size: 80%;
     text-decoration: none;
     color: black;
+    border: 0;
 }
 
-.dropdown-content > a:hover {
+.navbar-dropdown-buttons:hover {
     background-color: lightgray;
+    cursor: pointer;
 }

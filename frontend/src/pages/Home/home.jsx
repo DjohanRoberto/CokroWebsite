@@ -5,8 +5,8 @@ import { useNavigate} from "react-router-dom";
 import { useRef } from "react";
 
 import cakepic from "../../assets/cakes_1.JPG"
-import kitchenpic from "../../assets/dapur_machine.JPG"
-import rentpic from "../../assets/dapur_ovens2.JPG"
+import kitchenpic from "../../assets/dapur_wideleft.JPG"
+import rentpic from "../../assets/dapur_machine.JPG"
 import classpic1 from "../../assets/class_1.JPG"
 import classpic2 from "../../assets/class_5.JPG"
 
@@ -18,8 +18,8 @@ const Home = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         <NavBar/>
         <div className="hero">
-            <img src={cakepic} alt="" className="backpic" onClick={() => navigate('/cakes')}/>
-            <img src={kitchenpic} alt="" className="backpic" onClick={() => navigate('/gallery')}/>
+            <img src={cakepic} alt="" className="backpic" onClick={() => navigate('/gallery', { state : { targetId : 'cakes' } })}/>
+            <img src={kitchenpic} alt="" className="backpic" onClick={() => navigate('/gallery', { state : { targetId : 'kitchen' } })}/>
             <h1 className="cakes_text">Cakes</h1>
             <h1 className="kitchen_text">Kitchen</h1>
         </div>
