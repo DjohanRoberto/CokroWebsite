@@ -47,8 +47,6 @@ export default function App() {
 
   const AdminLoginToken = () => {
     const params = useParams()
-    console.log('test')
-    console.log(params.token)
     return <> 
       <AdminPage token={params.token}/>
     </>
@@ -68,9 +66,7 @@ export default function App() {
       <Route path='/admin' element={<AdminPage/>}>
         <Route path=':classid' element={<ClassEditWindow/>}></Route>
       </Route>
-      <Route path='/adminlogin' element={<AdminLogin/>}>
-        <Route path=':token' element={<AdminLoginToken/>}></Route>
-      </Route>
+      <Route path='/adminlogin' element={<AdminLogin/>}/>
      </Routes> 
     </BrowserRouter> 
   );

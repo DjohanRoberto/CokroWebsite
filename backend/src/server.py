@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request
 from flask_bcrypt import Bcrypt
 import json
 from classes import getAllClasses, getClassInfo
-from admin import newClass, delClass, updateClass
+from admin import newClass, delClass, updateClass, adminLogin, newAdminAcc, delAdminAcc, checkMaster
 ############################################################################
 #                           FLASK + DATABASE                               #
 ############################################################################
@@ -103,12 +103,12 @@ def upClass():
 #                           FLASK + DATABASE                               #
 ############################################################################
 
-@app.route("/admin/login", methods=["POST"])
-def adminlogin(): 
-    username = request.args.get('usernname')
+@app.route("/admin/login", methods=["GET"])
+def login(): 
+    username = request.args.get('username')
     password = request.args.get('password')
-    token = adminLogin(username, password)
-    return token
+    res = adminLogin(username, password)
+    return res
 
 if __name__ == "__main__":
     app.run(debug=True)

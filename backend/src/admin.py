@@ -5,17 +5,46 @@ db_file = 'database.json'
 
 # login
 def adminLogin(username, password): 
-    return 
+    f = open(db_file, 'r+')
+    data = json.load(f)
+
+    if username in data['accounts']:
+        if password == data['accounts'][username]['password']:
+            return 'true'
+    return 'false'
 
 # master account -> access to make new accounts for ppl
 
+def checkMaster(username):
+    f = open(db_file, 'r+')
+    data = json.load(f)
+
+    if username in data.accounts:
+        if data.accounts[username].master == True:
+            return True
+        else :
+            return False
+    else: 
+        return False
+    
 # make new account
-def newAdminAcc(username, password):
-    return
+def newAdminAcc(username, password, master):
+    f = open(db_file, 'r+')
+    data = json.load(f)
+
+    if username not in data.accounts:
+        data.accounts[username] = {
+            "password": password,
+            "master": master
+        }
 
 # delete account
 def delAdminAcc(username):
-    return
+    f = open(db_file, 'r+')
+    data = json.load(f)
+
+    if username in data.accounts:
+        del data.accounts[username]
 
 
 # create new class

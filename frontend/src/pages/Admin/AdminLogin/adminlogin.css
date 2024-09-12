@@ -1,0 +1,38 @@
+.adminlogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 95vh;
+    width: 100vw;
+    gap: 0.5rem;
+}
+
+.adminlogin label {
+    font-size: 120%;
+}
+
+.adminlogin input {
+    font-size: 105%;
+}
+
+.logo-login {
+    height: 10rem;
+}
+
+.login-button {
+    font-size: 110%;
+    margin-top: 0.5rem;;
+    border-radius: 15px;
+    padding: 7px;
+    padding-left: 21px;
+    padding-right: 21px;
+    background-color: rgb(150, 150, 150);
+    color: white;
+    border: 0;
+}
+
+.login-button:hover {
+    background-color: rgb(100, 100, 100);
+    cursor: pointer;
+}
